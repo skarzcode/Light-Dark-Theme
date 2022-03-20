@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Kaushan+Script&family=Oswald&display=swap');
-
+/* These color Palletes will be passed to the root element which is Html */
 :root {
   --primary-color: rgb(255, 92, 92);
   --primary-variant: #ff2d2d;
