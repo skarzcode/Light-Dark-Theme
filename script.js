@@ -14,24 +14,25 @@ function toggleNav(){
     //toggle menu bars open/closed
     menuBars.classList.toggle('change');
     nav.classList.toggle('toggle-class');
-    
 
 }
-
 
 function createEventListener() {
   if (nav1) {
-      nav1.addEventListener('click', toggleNav)
-    } if (nav2){
-        nav2.addEventListener('click', toggleNav)
-    }
-    if (nav3){
-        nav3.addEventListener('click', toggleNav)
-    }
-    if (nav4){
-        nav4.addEventListener('click', toggleNav)
-    }
-}
+nav1.addEventListener('click', toggleNav);
+  }
+  if (nav2) {
+    nav2.addEventListener('click', toggleNav);
+      }
+      if (nav3) {
+        nav3.addEventListener('click', toggleNav);
+          }
+          if (nav4) {
+            nav4.addEventListener('click', toggleNav);
+              }};
+
+
+
 
 
 
@@ -39,27 +40,19 @@ function createEventListener() {
 
 // Drk Mode Styles
 function darkMode(){
-    nav.style.backgroundColor = 'rgb(0 0 0 / 50%)';
-    if (window.innerWidth < 800) {
-        nav.style.backgroundColor = '#222222'
-    }
+    nav.style.backgroundColor = '#222222';
     toggleIcon.children[0].textContent = "Dark Mode";
     toggleIcon.children[1].classList.remove('fa-sun');
     toggleIcon.children[1].classList.add('fa-moon');
-
 }
 
 
 // Light Mode Styles
 function lightMode(){
-    nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
-    if (window.innerWidth < 800) {
-        nav.style.backgroundColor = 'whitesmoke'
-    }
+    nav.style.backgroundColor = 'whitesmoke';
     toggleIcon.children[0].textContent = "Light Mode";
     toggleIcon.children[1].classList.remove('fa-moon');
     toggleIcon.children[1].classList.add('fa-sun');
-
 }
 
 
@@ -82,7 +75,6 @@ function switchTheme(event){
 toggleSwitch.addEventListener('change', switchTheme);
 menuBars.addEventListener('click', toggleNav);
 
-
 // checking local storage for theme
 const currentTheme = localStorage.getItem('theme');
 
@@ -94,7 +86,8 @@ if(currentTheme){
     } else if(currentTheme === 'light'){
         toggleSwitch.checked = false;
         lightMode();
-    }
+    } else if(!currentTheme){
+        lightMode()
+    };
 } 
-
-createEventListener() 
+createEventListener()

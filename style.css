@@ -8,6 +8,7 @@
   --on-background: rgb(66, 66, 66);
   --on-background-2: rgba(66, 66, 66, 0.7);
   --background: rgb(255, 255, 255);
+   --background2:  #222222;
   --box-shadow: 0 5px 20px 1px rgba(0, 0, 0, 0.5);
 }
 
@@ -113,7 +114,7 @@ nav {
   letter-spacing: 3px;
   padding: 25px;
   width: 100vw;
-  background: rgb(255 255 255 / 50%);
+  background: whitesmoke;
   font-family: 'Oswald', sans-serif;
 }
 
