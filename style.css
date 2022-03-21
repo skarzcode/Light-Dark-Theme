@@ -408,6 +408,10 @@ input:checked + .slider::before {
     transition: 1s ease-in-out;
   }
 
+  a{
+    margin-right: 0px;
+  }
+
 
   .toggle-class{
     display: flex;
