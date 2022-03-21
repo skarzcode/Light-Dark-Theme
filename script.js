@@ -2,10 +2,47 @@ const toggleSwitch = document.querySelector('input[type="checkbox"]');
 const textBox =  document.getElementById ('text-box');
 const nav = document.getElementById('nav');
 const toggleIcon = document.getElementById ('toggle-icon');
+const menuBars = document.getElementById('menu-bars');
+const nav1 = document.getElementById('nav1');
+const nav2 = document.getElementById('nav2');
+const nav3 = document.getElementById('nav3');
+const nav4 = document.getElementById('nav4');
+
+
+
+function toggleNav(){
+    //toggle menu bars open/closed
+    menuBars.classList.toggle('change');
+    nav.classList.toggle('toggle-class');
+    
+
+}
+
+
+function createEventListener() {
+  if (nav1) {
+      nav1.addEventListener('click', toggleNav)
+    } if (nav2){
+        nav2.addEventListener('click', toggleNav)
+    }
+    if (nav3){
+        nav3.addEventListener('click', toggleNav)
+    }
+    if (nav4){
+        nav4.addEventListener('click', toggleNav)
+    }
+}
+
+
+
+
 
 // Drk Mode Styles
 function darkMode(){
     nav.style.backgroundColor = 'rgb(0 0 0 / 50%)';
+    if (window.innerWidth < 800) {
+        nav.style.backgroundColor = '#222222'
+    }
     toggleIcon.children[0].textContent = "Dark Mode";
     toggleIcon.children[1].classList.remove('fa-sun');
     toggleIcon.children[1].classList.add('fa-moon');
@@ -16,6 +53,9 @@ function darkMode(){
 // Light Mode Styles
 function lightMode(){
     nav.style.backgroundColor = 'rgb(255 255 255 / 50%)';
+    if (window.innerWidth < 800) {
+        nav.style.backgroundColor = 'whitesmoke'
+    }
     toggleIcon.children[0].textContent = "Light Mode";
     toggleIcon.children[1].classList.remove('fa-moon');
     toggleIcon.children[1].classList.add('fa-sun');
@@ -38,8 +78,10 @@ function switchTheme(event){
     
 }
 
-
+// event listeners
 toggleSwitch.addEventListener('change', switchTheme);
+menuBars.addEventListener('click', toggleNav);
+
 
 // checking local storage for theme
 const currentTheme = localStorage.getItem('theme');
@@ -54,3 +96,5 @@ if(currentTheme){
         lightMode();
     }
 } 
+
+createEventListener() 
