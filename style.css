@@ -116,6 +116,7 @@ nav {
   width: 100vw;
   background: whitesmoke;
   font-family: 'Oswald', sans-serif;
+  align-content: center;
 }
 
 a {
@@ -406,6 +407,7 @@ input:checked + .slider::before {
     align-items: center;
     height: 100vh;
     transition: 1s ease-in-out;
+    padding: 0;
   }
 
   a{
