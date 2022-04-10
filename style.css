@@ -141,6 +141,7 @@ section#home{
 /* hero-container + Gif + content */
 .hero-container{
   width: 85%;
+  max-width: 2000px;
   margin-top: 100px;
   display: flex;
   justify-content: space-around;
@@ -207,7 +208,9 @@ button {
 /* About Section */
 
 section#about{
-  min-height: 100vh;
+  min-height: auto;
+  max-width: 2000px;
+  margin: 50px auto;
 }
 
 .about-container {
@@ -244,14 +247,24 @@ section#about h1{
 }
 
 /* Projects Section */
+
+
+section#projects{
+  margin: 50px auto;
+}
+
+
 .black-white-box{
   width: 80%;
-  height: 400px;
+  max-width: 2000px;
+  height: auto;
+  min-height: 400px;
   background-color: var( --background2);
   border-radius: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin: 0 auto;
 }
 
 .black-white-box img{
@@ -274,7 +287,9 @@ section#about h1{
 /* meet the team section */
 
 section#Meet-The-Team{
-  min-height: 70vh;
+  min-height: auto;
+  margin: 50px auto;
+ 
 }
 
 .NFT-IMG2{
@@ -309,6 +324,7 @@ section#Meet-The-Team{
 section#contact{
   min-height: 50vh;
   margin: 20px;
+  margin: 50px auto;
 }
 .fab {
   font-size: 100px;
